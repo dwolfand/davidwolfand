@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Wolfand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Hi! I'm David</h1>
+          <p class="subtitle">Software Engineer in Washington DC</p>
+          <p class="bio">
+            I like to build & explore tech for both work and fun.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/dwolfand"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dwolfand/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="./David Wolfand - Resume (2025).pdf"
+              target="_blank"
+              class="social-link resume-link"
+            >
+              <i class="fas fa-file-alt"></i>
+            </a>
+          </div>
+          <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobbies">
+        <div class="container">
+          <div class="hobby-grid">
+            <div class="hobby-image">
+              <img src="./images/race.jpeg" alt="David running" />
+            </div>
+            <div class="hobby-image">
+              <img src="./images/group.jpeg" alt="David traveling" />
+            </div>
+          </div>
+          <div class="personal-bio">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const scrollIndicator = document.querySelector(".scroll-indicator");
+      const hobbiesSection = document.querySelector(".hobbies");
+
+      // Handle scroll visibility
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          scrollIndicator.style.opacity = "0";
+        } else {
+          scrollIndicator.style.opacity = "1";
+        }
+      });
+
+      // Handle click to scroll
+      scrollIndicator.addEventListener("click", () => {
+        hobbiesSection.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
